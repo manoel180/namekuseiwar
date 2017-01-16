@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>DragonBall</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>3gi33nn5rt8qi</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>480</width>
+        <height>640</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>1</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Nothing (not recommended)</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">Yes</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Sprite" sid="582983791696467">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="213588856348311" speed="5">
+                    <frame duration="1" hotspotX="1.8536" hotspotY="0.298387" original-source="C:\Users\manoel.neto\Documents\Sprites-INFINITY-RUNNING.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.298246" />
+                            <point x="1" y="0.78923" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Goku" sid="145577799730489">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="788889246451400">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="846387783046876">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="691787943307862" speed="5">
+                    <frame duration="1" hotspotX="0.78" hotspotY="0.611111" original-source="E:\Manoel Dragon Ball\fwdsprites\Sprites-INFINITY-RUNNING7.png">
+                        <collision-poly>
+                            <point x="0.605946" y="0.269575" />
+                            <point x="0.913574" y="0.0444444" />
+                            <point x="0.981982" y="0.724832" />
+                            <point x="0.726727" y="0.704698" />
+                            <point x="0.681682" y="0.919463" />
+                            <point x="0" y="0.95302" />
+                            <point x="0.057057" y="0.644295" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Chao" sid="759166856816176">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="712084180425217">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Keyboard" sid="748796952267736">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type global="1" name="ScoreTXT" sid="371879375547064">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="Passou" sid="552826466185728" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="ObstaculoChao" sid="543107524324903">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Passou" sid="753286610395421" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="484698437008034">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="451565433739489">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="924262689657193">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="233965744193720" speed="5">
+                    <frame duration="1" hotspotX="0.451128" hotspotY="-0.226667">
+                        <collision-poly>
+                            <point x="0.218045" y="0.386667" />
+                            <point x="0.496241" y="0.0133333" />
+                            <point x="0.736842" y="0.466667" />
+                            <point x="0.744361" y="0.493333" />
+                            <point x="0.992481" y="0.986667" />
+                            <point x="0.496241" y="1" />
+                            <point x="0.0075188" y="0.986667" />
+                            <point x="0.18797" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ObstaculoChao2" sid="692060107831651">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Passou2" sid="787487001083451" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="688888985446867">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="946570435135837">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="889481411849622">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268478134234019" speed="5">
+                    <frame duration="1" hotspotX="0.516129" hotspotY="-0.119048">
+                        <collision-poly>
+                            <point x="0.247312" y="0.0119047" />
+                            <point x="0.5" y="0.0119048" />
+                            <point x="0.731183" y="0.154762" />
+                            <point x="0.908602" y="0.5" />
+                            <point x="0.994624" y="0.988095" />
+                            <point x="0.00537634" y="0.988095" />
+                            <point x="0.188172" y="0.22619" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ObstaculoCeu" sid="565455629271170">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="433664192727602">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="101990512342769">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="855711628384988">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="301242213862830">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="364399584686784" speed="5">
+                    <frame duration="1" hotspotX="0.16" hotspotY="0.566667" original-source="E:\Manoel Dragon Ball\fwdsprites\Sprites-INFINITY-RUNNING13.png">
+                        <collision-poly>
+                            <point x="0.163934" y="0" />
+                            <point x="0.293592" y="0.400881" />
+                            <point x="0.581222" y="0.30837" />
+                            <point x="0.977645" y="0.497797" />
+                            <point x="0.892697" y="0.973568" />
+                            <point x="0.391953" y="0.947136" />
+                            <point x="0.0208644" y="0.69163" />
+                            <point x="0.00149031" y="0.519824" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Background" sid="534485121610027">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="205478633075195">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="E:\Manoel Dragon Ball\fwdsprites\bg.png" />
+        </object-type>
+        <object-type name="Goku2" sid="342029691258134">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="630603813254603">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="459009782942140" speed="5">
+                    <frame duration="1" hotspotX="0.641115" hotspotY="0.440559">
+                        <collision-poly>
+                            <point x="0.41115" y="0.412587" />
+                            <point x="0.498258" y="0.027972" />
+                            <point x="0.721254" y="0.27972" />
+                            <point x="0.836237" y="0.5" />
+                            <point x="0.89547" y="0.895105" />
+                            <point x="0.498258" y="0.961538" />
+                            <point x="0.188153" y="0.811189" />
+                            <point x="0.418118" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="887815857945221">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="727657640430992" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500087" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tiroP1" sid="687016897672507">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="662196294748943">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="808378845739001">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="809294898510554" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Manoel Dragon Ball\fwdsprites\RAIO-goku.png">
+                        <collision-poly>
+                            <point x="0.859873" y="0.191304" />
+                            <point x="0.996815" y="0.5" />
+                            <point x="0.863057" y="0.813043" />
+                            <point x="0.5" y="0.982609" />
+                            <point x="0.264331" y="0.63913" />
+                            <point x="0.00318474" y="0.5" />
+                            <point x="0.267516" y="0.365217" />
+                            <point x="0.5" y="0.026087" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tiroP2" sid="977490533245608">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="870804127407332">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="566275848895492">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="619190662387287" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Manoel Dragon Ball\fwdsprites\RAIO-vegetta.png">
+                        <collision-poly>
+                            <point x="0.266881" y="0.631579" />
+                            <point x="0.0128618" y="0.504386" />
+                            <point x="0.257235" y="0.364035" />
+                            <point x="0.495177" y="0.00877191" />
+                            <point x="0.864952" y="0.184211" />
+                            <point x="0.996785" y="0.504386" />
+                            <point x="0.855305" y="0.811404" />
+                            <point x="0.495177" y="0.982456" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tiroP3" sid="925691518415028">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="440194985654658">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="111020160444029">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="514423925369215" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\Manoel Dragon Ball\fwdsprites\RAIO-nave.png">
+                        <collision-poly>
+                            <point x="0.266026" y="0.635965" />
+                            <point x="0.00320512" y="0.5" />
+                            <point x="0.26282" y="0.359649" />
+                            <point x="0.5" y="0.0131579" />
+                            <point x="0.865385" y="0.184211" />
+                            <point x="1" y="0.5" />
+                            <point x="0.865385" y="0.815789" />
+                            <point x="0.5" y="0.982456" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="reset" sid="691307483448034">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="885487169950091" speed="5">
+                    <frame duration="1" hotspotX="1.73214" hotspotY="3" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="continue" sid="572586827629013">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="181536843240178" speed="5">
+                    <frame duration="1" hotspotX="1.85714" hotspotY="1.79688" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="995670509426128">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="849526765552038" speed="5">
+                    <frame duration="1" hotspotX="0.52514" hotspotY="0.494949" original-source="E:\Manoel Dragon Ball\fwdsprites\Sprites-INFINITY-RUNNING8.png">
+                        <collision-poly>
+                            <point x="0.0149573" y="0.02" />
+                            <point x="0.523504" y="0.012" />
+                            <point x="0.995726" y="0.092" />
+                            <point x="0.982906" y="0.492" />
+                            <point x="0.876068" y="0.672" />
+                            <point x="0.523504" y="0.98" />
+                            <point x="0.239316" y="0.548" />
+                            <point x="0.237179" y="0.492" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HIScoreTXT2" sid="795479161557489">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="Passou" sid="726223391288900" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="Score" sid="279608855761923">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="Passou" sid="172991744158172" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="ScoreTXT2" sid="385322356913447">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="Passou" sid="992654972403584" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type global="1" name="ScoreTXT4" sid="541129503717599">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Touch" sid="774723905132371">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="LocalStorage" sid="314552141612611">
+            <plugin id="LocalStorage" />
+        </object-type>
+        <object-type name="Audio" sid="174220574916887">
+            <plugin id="Audio" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="4" />
+        <global-instance type="Touch" uid="12">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="LocalStorage" uid="17" />
+        <global-instance type="Audio" uid="14">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="Dragon_Ball_Z_Tema_Battle.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

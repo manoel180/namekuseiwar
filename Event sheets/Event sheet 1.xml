@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="isDead" sid="369636575676695" static="0" type="number">0</variable>
+        <variable constant="0" name="life" sid="872008830126123" static="0" type="number">3</variable>
+        <variable constant="0" name="HiScore" sid="781803084354917" static="0" type="number">0</variable>
+        <variable constant="0" name="Score" sid="760715382715485" static="0" type="number">0</variable>
+        <event-block sid="603880861925744">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="732678726755934" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="301147376179475" type="Background">
+                    <param id="0" name="Angle">-180</param>
+                </action>
+                <action behavior="Bullet" disabled="1" id="3" name="Set angle of motion" sid="334565257960012" type="Chao">
+                    <param id="0" name="Angle">-180</param>
+                </action>
+                <action id="-9" name="Set value" sid="447269442213422" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="702535384941298" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action disabled="1" id="-21" name="Reset global variables" sid="416672981190665" type="System" />
+                <action disabled="1" id="-9" name="Set value" sid="899801162983339" type="System">
+                    <param id="0" name="Variable">life</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="0" name="Set text" sid="553389869654671" type="ScoreTXT">
+                    <param id="0" name="Text">0</param>
+                </action>
+                <action id="0" name="Play" sid="539176053133546" type="Audio">
+                    <param id="0" name="Audio file">Dragon_Ball_Z_Tema_Battle</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="220041705623384">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="119048574238784" type="Background">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">-1 * (Background.Width - WindowWidth)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="820438687700554" type="Background">
+                    <param id="0" name="X">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="602012918141151">
+            <conditions>
+                <condition id="2" name="Key is down" sid="452303693046170" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition disabled="1" id="-2" name="Compare Y" sid="738101965660750" type="Goku">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="579871278991649" type="Goku">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="444685097114846">
+            <conditions>
+                <condition id="2" name="Key is down" sid="608819990267664" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="425515504307509" type="Goku">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">485</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="808679694707932" type="Goku">
+                    <param id="0" name="Control">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="878069930286462">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="417767775125055" type="System">
+                    <param id="0" name="Interval (seconds)">2.0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="165419588825936" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-3" name="Create object" sid="756638951410523" type="System">
+                    <param id="0" name="Object to create">ObstaculoChao</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">600</param>
+                    <param id="3" name="Y">400</param>
+                </action>
+                <action id="-3" name="Create object" sid="354144304956657" type="System">
+                    <param id="0" name="Object to create">ObstaculoChao2</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">800</param>
+                    <param id="3" name="Y">500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="404545296649961">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="744298184696106" type="System">
+                    <param id="0" name="Interval (seconds)">3.5</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="614910552898638" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="235074267764798" type="System">
+                    <param id="0" name="Object to create">ObstaculoCeu</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">700</param>
+                    <param id="3" name="Y">int(random(110,345)) </param>
+                </action>
+                <action id="-3" name="Create object" sid="507225498489804" type="System">
+                    <param id="0" name="Object to create">ObstaculoCeu</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">int(random(500,800)) </param>
+                    <param id="3" name="Y">int(random(110,345)) </param>
+                </action>
+                <action id="0" name="Spawn another object" sid="593111064558633" type="ObstaculoCeu">
+                    <param id="0" name="Object">tiroP3</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-8" name="Set angle" sid="726590000140291" type="tiroP3">
+                    <param id="0" name="Angle">180</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="524783534628770">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="324798225751716" type="Goku">
+                    <param id="0" name="Object">ObstaculoChao</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="980224066501470" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="841129597960682">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="343544577078847" type="Goku">
+                    <param id="0" name="Object">ObstaculoChao2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="963177303814126" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="342700938482851">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="120909248244371" type="Goku">
+                    <param id="0" name="Object">Chao</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="328583645952433" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="694628989781343">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="838882039115229" type="Goku">
+                    <param id="0" name="Object">ObstaculoCeu</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="387734303106913" type="Goku">
+                    <param id="0" name="Object">tiroP3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-9" name="Set value" sid="838942384094103" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="634685638067122" type="System">
+                    <param id="0" name="Variable">life</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="247697969099322">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="872550802479162" type="ObstaculoChao">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">Goku.X</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="377452214043070" type="ObstaculoChao">
+                    <param id="0" name="Instance variable">Passou</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="980642116782820" type="ObstaculoChao">
+                    <param id="0" name="Instance variable">Passou</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="337415727014063" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="233606809071172" type="ScoreTXT">
+                    <param id="0" name="Text">Score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="122087742716801">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="665951664918771" type="ObstaculoChao2">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">Goku.X</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="299684603355609" type="ObstaculoChao2">
+                    <param id="0" name="Instance variable">Passou2</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="567702251664445" type="ObstaculoChao2">
+                    <param id="0" name="Instance variable">Passou2</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="348795623471545" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="906649613658398" type="ScoreTXT">
+                    <param id="0" name="Text">Score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="270438547379600">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="996694711020894" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="806636685638116" type="Chao">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="999908093472567" type="ObstaculoChao">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="949679821085284" type="ObstaculoChao2">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="750831260612349" type="Background">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="597548517339954" type="ObstaculoCeu">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="2" name="Stop" sid="559534251581090" type="ObstaculoCeu" />
+                <action behavior="Bullet" id="5" name="Set enabled" sid="833815494181929" type="tiroP3">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="519053049979451" type="tiroP1">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="739843355185110" type="Goku">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="235844803476988" type="ObstaculoCeu">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="398163796286759" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="725781428009226" type="Score">
+                    <param id="0" name="Text">Score</param>
+                </action>
+                <action disabled="1" id="-15" name="Set visible" sid="960449450309824" type="ScoreTXT">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="311807606304672">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="884516022876245" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="234156710124489" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="512247973952248" type="Goku">
+                    <param id="0" name="Object">tiroP1</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action disabled="1" id="-3" name="Create object" sid="499932000836714" type="System">
+                    <param id="0" name="Object to create">tiroP1</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">Goku.x + 20</param>
+                    <param id="3" name="Y">Goku.Y</param>
+                </action>
+                <action behavior="Bullet" disabled="1" id="5" name="Set enabled" sid="754522277684593" type="tiroP1">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" disabled="1" id="3" name="Set angle of motion" sid="809832396804640" type="tiroP1">
+                    <param id="0" name="Angle">45</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="133319897379388">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="888747433030231" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="831546462385692" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="608976910100196" type="ObstaculoCeu">
+                    <param id="0" name="Object">tiroP3</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-8" name="Set angle" sid="396749930644133" type="tiroP3">
+                    <param id="0" name="Angle">180</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="536412695691553">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="786550221022081" type="tiroP1">
+                    <param id="0" name="Object">tiroP3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="444417350909001" type="tiroP3" />
+                <action id="-9" name="Destroy" sid="533377266419088" type="tiroP1" />
+            </actions>
+        </event-block>
+        <event-block sid="627768713023145">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="372361977592909" type="System">
+                    <param id="0" name="Variable">life</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="786593893451357" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="148566566274596">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="400743859111256" type="System">
+                    <param id="0" name="Variable">HiScore</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">Score</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="271909752544161" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="544355473842177" type="System">
+                    <param id="0" name="Variable">HiScore</param>
+                    <param id="1" name="Value">Score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="562904931373421">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="665985367947064" type="Touch">
+                    <param id="0" name="Object">reset</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="108959895382881" type="Score">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="395847099429295" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="142531458280315" type="System">
+                    <param id="0" name="Variable">life</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="112077854947347" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="628574469331215" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="213129054324689" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="943177837547388">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="895795480114732" type="tiroP1">
+                    <param id="0" name="Object">ObstaculoCeu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="282698927712931" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="471903312141527" type="ObstaculoCeu" />
+                <action id="-9" name="Destroy" sid="148118729657022" type="tiroP1" />
+                <action id="0" name="Set text" sid="841916671243657" type="ScoreTXT">
+                    <param id="0" name="Text">Score</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
